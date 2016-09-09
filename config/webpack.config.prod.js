@@ -196,6 +196,10 @@ module.exports = {
   },
   plugins: [
     // Generates an `index.html` file with the <script> injected.
+    new ExtractTextPlugin({
+      filename: 'app.css',
+      allChunks: true
+    })    
     new HtmlWebpackPlugin({
       inject: true,
       template: paths.appHtml,
