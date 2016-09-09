@@ -193,9 +193,6 @@ module.exports = {
   },
   plugins: [
     // Generates an `index.html` file with the <script> injected.
-    new ExtractTextPlugin('app.css', {
-      allChunks: true
-    })
     new HtmlWebpackPlugin({
       inject: true,
       template: paths.appHtml,
@@ -236,6 +233,6 @@ module.exports = {
       }
     }),
     // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
-    new ExtractTextPlugin('static/css/[name].[contenthash:8].css')
+    new ExtractTextPlugin('app.css', {allChunks: true})
   ]
 };
