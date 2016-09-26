@@ -65,6 +65,9 @@ module.exports = {
     publicPath: '/'
   },
   resolve: {
+    root: [
+        path.resolve('./client')
+    ],
     // These are the reasonable defaults supported by the Node ecosystem.
     extensions: ['.js', '.json', ''],
     alias: {
