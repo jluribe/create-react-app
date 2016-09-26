@@ -60,8 +60,9 @@ module.exports = {
     publicPath: publicPath
   },
   resolve: {
-    root: [
-        path.resolve('./client')
+    modules: [
+        path.resolve('./client'),
+        path.resolve('./node_modules')
     ],
     // These are the reasonable defaults supported by the Node ecosystem.
     extensions: ['.js', '.json', ''],
